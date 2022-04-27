@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>CSS Selectors Cheatsheet</title>
+</head>
+<body>
+    <!-- header section -->
+    <header>
+        <!-- title -->
+        <div id="title">CSS Selectors Cheatsheet</div>
+        <div id="subtitle">Created by: Yuta Nagano</div>
+
+        <!-- toc -->
+        <ol>
+            <li><a href="#simple">Simple Selectors</a></li>
+            <li><a href="#combinator">Combinator Selectors</a></li>
+            <li><a href="#pseudo-class">Pseudo-class Selectors</a></li>
+            <li><a href="#pseudo-element">Pseudo-element Selectors</a></li>
+            <li><a href="#attribute">Attribute Selectors</a></li>
+        </ol>
+    </header>
+
+    <!-- main section -->
+    <main>
+        <!-- simple selector section -->
+        <h1 id="simple">Simple Selectors</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Selector Name</th>
+                    <th>Example</th>
+                    <th>Explanation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Element Selector</td>
+                    <td>p {}</td>
+                    <td>Selects all <span class="code"><span class="code">&lt;p&gt;</span> elements</td>
+                </tr>
+                <tr>
+                    <td>Class Selector</td>
+                    <td>.class {}</td>
+                    <td>Selects all elements with <span class="code">class="class"</span></td>
+                </tr>
+                <tr>
+                    <td>Class Selector<br>(with specified element tag)</td>
+                    <td>p.class {}</td>
+                    <td>Selects all <span class="code">&lt;p&gt;</span> elements with <span class="code">class="class"</span></td>
+                </tr>
+                <tr>
+                    <td>ID Selector</td>
+                    <td>#id {}</td>
+                    <td>Selects all elements with <span class="code">id="id"</span></td>
+                </tr>
+                <tr>
+                    <td>Universal Selector</td>
+                    <td>* {}</td>
+                    <td>Selects all elements</td>
+                </tr>
+                <tr>
+                    <td>Grouping Selector</td>
+                    <td>p, .class, #id {}</td>
+                    <td>Selects all <span class="code">&lt;p&gt;</span> elements, elements with <span class="code">class="class"<span>, and elements with <span class="code">id="id"</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Combinator selector section -->
+        <h1 id="combinator">Combinator Selectors</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Selector Name</th>
+                    <th>Example</th>
+                    <th>Explanation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Descendent Selector</td>
+                    <td>div p {}</td>
+                    <td>Selects all <span class="code">&lt;p&gt;</span> elements that are descendents of <span class="code">&lt;div&gt;</span> elements</td>
+                </tr>
+                <tr>
+                    <td>Child Selector</td>
+                    <td>div > p {}</td>
+                    <td>Selects all <span class="code">&lt;p&gt;</span> elements that are children of <span class="code">&lt;div&gt;</span> elements</td>
+                </tr>
+                <tr>
+                    <td>General Sibling Selector</td>
+                    <td>div ~ p {}</td>
+                    <td>Selects all <span class="code">&lt;p&gt;</span> elements that are preceded by a <span class="code">&lt;div&gt;</span> element, where all elements have the same parent</td>
+                </tr>
+                <tr>
+                    <td>Adjacent Sibling Selector</td>
+                    <td>div + p {}</td>
+                    <td>Selects the first <span class="code">&lt;p&gt;</span> element after each <span class="code">&lt;div&gt;</span> element, where both elements have the same parent</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- pseudo-class selector section -->
+        <h1 id="pseudo-class">Psuedo-class Selectors</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Selector Name</th>
+                    <th>Example</th>
+                    <th>Explanation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Active Selector</td>
+                    <td>a:active {}</td>
+                    <td>Selects the <span class="code">&lt;a&gt;</span> element being pressed with the mouse</td>
+                </tr>
+                <tr>
+                    <td>Visited Selector</td>
+                    <td>a:visited {}</td>
+                    <td>Selects all visited <span class="code">&lt;a&gt;</span> elements</td>
+                </tr>
+                <tr>
+                    <td>Link Selector</td>
+                    <td>a:link {}</td>
+                    <td>Selects all unvisited <span class="code">&lt;a&gt;</span> elements</td>
+                </tr>
+                <tr>
+                    <td>Checked Selector</td>
+                    <td>input:checked {}</td>
+                    <td>Selects all checked <span class="code">&lt;input&gt;</span> elements</td>
+                </tr>
+                <tr>
+                    <td>Enabled Selector</td>
+                    <td>input:Enabled {}</td>
+                    <td>Selects all enabled <span class="code">&lt;input&gt;</span> elements</td>
+                </tr>
+                <tr>
+                    <td>Disabled Selector</td>
+                    <td>input:disabled {}</td>
+                    <td>Selects all disabled <span class="code">&lt;input&gt;</span> elements</td>
+                </tr>
+                <tr>
+                    <td>Focus Selector</td>
+                    <td>input:focus {}</td>
+                    <td>Selects the <span class="code">&lt;input&gt;</span> element that has focus</td>
+                </tr>
+                <tr>
+                    <td>In-range Selector</td>
+                    <td>input:in-range {}</td>
+                    <td>Selects <span class="code">&lt;input&gt;</span> elements with min and max attributes, that have a value within that specified range</td>
+                </tr>
+                <tr>
+                    <td>Out-of-range Selector</td>
+                    <td>input:out-of-range {}</td>
+                    <td>Selects <span class="code">&lt;input&gt;</span> elements with min and max attributes, that have a value outside that specified range</td>
+                </tr>
+                <tr>
+                    <td>Valid Selector</td>
+                    <td>input::valid {}</td>
+                    <td>Selects <span class="code">&lt;input&gt;</span> elements with valid values</td>
+                </tr>
+                <tr>
+                    <td>Invalid Selector</td>
+                    <td>input:invalid {}</td>
+                    <td>Selects <span class="code">&lt;input&gt;</span> elements with invalid values</td>
+                </tr>
+                <tr>
+                    <td>Optional Selector</td>
+                    <td>input:optional {}</td>
+                    <td>Selects <span class="code">&lt;input&gt;</span> elements with no "required" attribute</td>
+                </tr>
+                <tr>
+                    <td>Read-only Selector</td>
+                    <td>input:read-only {}</td>
+                    <td>Selects <span class="code">&lt;input&gt;</span> elements with a "readonly" attribute specified</td>
+                </tr>
+                <tr>
+                    <td>Read-write Selector</td>
+                    <td>input:read-write {}</td>
+                    <td>Selects <span class="code">&lt;input&gt;</span> elements with no "readonly" attribute</td>
+                </tr>
+                <tr>
+                    <td>Lang Selector</td>
+                    <td>p:lang(ln) {}</td>
+                    <td>Selects <span class="code">&lt;p&gt;</span> elements that have a lang attribute starting with "ln"</td>
+                </tr>
+                <tr>
+                    <td>Hover Selector</td>
+                    <td>:hover {}</td>
+                    <td>Selects elements on mouse hover</td>
+                </tr>
+                <tr>
+                    <td>Empty Selector</td>
+                    <td>:empty {}</td>
+                    <td>Selects elements with no children</td>
+                </tr>
+                <tr>
+                    <td>First-child Selector</td>
+                    <td>:first-child {}</td>
+                    <td>Selects elements that are first children of their parent elements</td>
+                </tr>
+                <tr>
+                    <td>Last-child Selector</td>
+                    <td>:last-child {}</td>
+                    <td>Selects elements that are last children of their parent elements</td>
+                </tr>
+                <tr>
+                    <td>Nth-child Selector</td>
+                    <td>:nth-child(2) {}</td>
+                    <td>Selects elements that are the nth (in this case 2nd) children of their parent elements</td>
+                </tr>
+                <tr>
+                    <td>Nth-last-child Selector</td>
+                    <td>:nth-last-child(2) {}</td>
+                    <td>Selects elements that are the nth (in this case 2nd) to last children of their parent elements</td>
+                </tr>
+                <tr>
+                    <td>Only-child Selector</td>
+                    <td>:only-child {}</td>
+                    <td>Selects an element if it is the only child of its parent element</td>
+                </tr>
+                <tr>
+                    <td>First-of-type Selector</td>
+                    <td>p:first-of-type {}</td>
+                    <td>Selects elements that are the first of type <span class="code">&lt;p&gt;</span> in their parent elements</td>
+                </tr>
+                <tr>
+                    <td>Last-of-type Selector</td>
+                    <td>p:last-of-type {}</td>
+                    <td>Selects elements that are the last of type <span class="code">&lt;p&gt;</span> in their parent elements</td>
+                </tr>
+                <tr>
+                    <td>Nth-of-type Selector</td>
+                    <td>p:nth-of-type(2) {}</td>
+                    <td>Selects elements that are the nth (in this case 2nd) of type <span class="code">&lt;p&gt;</span> in their parent elements</td>
+                </tr>
+                <tr>
+                    <td>Nth-last-of-type Selector</td>
+                    <td>p:nth-last-of-type(2) {}</td>
+                    <td>Selects elements that are the nth (in this case 2nd) to last of type <span class="code">&lt;p&gt;</span> in their parent elements</td>
+                </tr>
+                <tr>
+                    <td>Only-of-type Selector</td>
+                    <td>p:only-of-type {}</td>
+                    <td>Selects <span class="code">&lt;p&gt;</span> element if it is the only <span class="code">&lt;p&gt;</span> element of their parent</td>
+                </tr>
+                <tr>
+                    <td>Not Selector</td>
+                    <td>:not(p) {}</td>
+                    <td>Selects all elements that are not <span class="code">&lt;p&gt;</span> elements</td>
+                </tr>
+                <tr>
+                    <td>Root Selector</td>
+                    <td>:root {}</td>
+                    <td>Selects the document's root element</td>
+                </tr>
+                <tr>
+                    <td>Target Selector</td>
+                    <td>#id:target {}</td>
+                    <td>Selects the element with <span class="code">id="id"</span> if the user arrives there from a hyperlink to that anchor name</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- pseudo-element selector section -->
+        <h1 id="pseudo-element">Pseudo-element Selectors</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Selector Name</th>
+                    <th>Example</th>
+                    <th>Explanation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>First-letter Selector</td>
+                    <td>p::first-letter {}</td>
+                    <td>Selects the first letter of every <span class="code">&lt;p&gt</span> element</td>
+                </tr>
+                <tr>
+                    <td>First-line Selector</td>
+                    <td>p::first-line {}</td>
+                    <td>Selects the first line of every <span class="code">&lt;p&gt</span> element</td>
+                </tr>
+                <tr>
+                    <td>Marker Selector</td>
+                    <td>ol li::marker {}</td>
+                    <td>Selects the marker elements of all <span class="code">&lt;li&gt</span> elements that are children of <span class="code">&lt;ol&gt</span> elements</td>
+                </tr>
+                <tr>
+                    <td>Selection Selector</td>
+                    <td>::selection {}</td>
+                    <td>Selects the portion of an element that is selected by a user</td>
+                </tr>
+                <tr>
+                    <td>After Selector</td>
+                    <td>::after {content: url(img.img);}</td>
+                    <td>Inserts content (in this case, img.img) after each element</td>
+                </tr>
+                <tr>
+                    <td>Before Selector</td>
+                    <td>::before {content: url(img.img);}</td>
+                    <td>Inserts content (in this case, img.img) before each element</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- attribute selector section -->
+        <h1 id="attribute">Attribute Selectors</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Selector Name</th>
+                    <th>Example</th>
+                    <th>Explanation</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>[attribute] Selector</td>
+                    <td>[target] {}</td>
+                    <td>Selects elements with attribute "target" set</td>
+                </tr>
+                <tr>
+                    <td>[attribute=value] Selector</td>
+                    <td>[target=_blank] {}</td>
+                    <td>Selects elements with attribute <span class="code">target="_blank"</span></td>
+                </tr>
+                <tr>
+                    <td>[attribute~=value] Selector</td>
+                    <td>[title~=flower] {}</td>
+                    <td>Selects elements with attribute title containing "flower"</td>
+                </tr>
+                <tr>
+                    <td>[attribute|=value] Selector</td>
+                    <td>[lang|=ln] {}</td>
+                    <td>Selects elements with attribute lang starting with "ln"</td>
+                </tr>
+                <tr>
+                    <td>[attribute^=value] Selector</td>
+                    <td>a[href^="https"] {}</td>
+                    <td>Selects <span class="code">&lt;a&gt</span> elements with attribute href starting with "https"</td>
+                </tr>
+                <tr>
+                    <td>[atrribute$=value] Selector</td>
+                    <td>a[href$=".pdf"] {}</td>
+                    <td>Selects <span class="code">&lt;a&gt</span> elements with attribute href ending with ".pdf"</td>
+                </tr>
+                <tr>
+                    <td>[attribute*=value] Selector</td>
+                    <td>a[href*="pattern"] {}</td>
+                    <td>Selects <span class="code">&lt;a&gt</span> elements with attribute href containing "pattern"</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
